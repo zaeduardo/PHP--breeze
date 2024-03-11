@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class PageOneController extends Controller
 {
@@ -10,5 +11,4 @@ class PageOneController extends Controller
     {
         return view('page-one');
     }
-
 }

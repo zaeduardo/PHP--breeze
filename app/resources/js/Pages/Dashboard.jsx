@@ -50,7 +50,7 @@ function TodoList() {
     </div>
   );
 }
-                                                            
+                                                        
 export default function Dashboard({ auth }) {
   return (
     <AuthenticatedLayout

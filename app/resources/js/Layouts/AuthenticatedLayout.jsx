@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
+import One from '@/Components/One';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
 
@@ -22,18 +23,13 @@ export default function Authenticated({ user, header, children }) {
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
-                                    Home
+                                             Dashboard
                                 </NavLink>
-
-
-
-                                <x-nav-link href={route('page-one')} active={route().current('page-one')}>
-                                    Page
-                                </x-nav-link>
-
-
-
-
+                                
+                                <NavLink  href={route('page-one')} active={route().current('page-one')} >
+                                    Page One
+                                </NavLink>
+                                              
                             </div>
                         </div>
 
@@ -65,9 +61,9 @@ export default function Authenticated({ user, header, children }) {
                                     </Dropdown.Trigger>
 
                                     <Dropdown.Content>
-                                        <Dropdown.Link href={route('profile.edit')}>Profile</Dropdown.Link>
+                                        <Dropdown.Link href={route('profile.edit')}>Perfil</Dropdown.Link>
                                         <Dropdown.Link href={route('logout')} method="post" as="button">
-                                            Log Out
+                                            Sair
                                         </Dropdown.Link>
                                     </Dropdown.Content>
                                 </Dropdown>

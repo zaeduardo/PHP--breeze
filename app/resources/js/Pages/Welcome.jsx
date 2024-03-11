@@ -10,7 +10,8 @@ export default function Welcome({ auth }) {
             
             <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
                 {!auth.user ? (
-                    <Fragment className="bg-zinc-950">
+                    <div className="bg-amber-50	">
+                        
                         <Link
                             href={route('login')}
                             className=""
@@ -28,7 +29,7 @@ export default function Welcome({ auth }) {
                         >
                             Register
                         </Link>
-                    </Fragment>
+                    </div>
                 ) : null}
             </div>
         </div>
