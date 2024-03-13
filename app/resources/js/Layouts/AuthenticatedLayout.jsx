@@ -5,6 +5,7 @@ import NavLink from '@/Components/NavLink';
 import One from '@/Components/One';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
+import LinkPage from '@/Components/LinkPage';
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -22,13 +23,14 @@ export default function Authenticated({ user, header, children }) {
                             </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                {/* NavLink é só um  compnente que estiliza um tag Link */}
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                                              Dashboard
-                                </NavLink>
-                                
-                                <NavLink  href={route('page-one')} active={route().current('page-one')} >
+                            </NavLink>
+
+                                <LinkPage href={route('page-one')} active={route().current('page-one')} >
                                     Page One
-                                </NavLink>
+                                </LinkPage>
                                               
                             </div>
                         </div>

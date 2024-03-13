@@ -41,7 +41,7 @@ function TodoList() {
 
       <ul>
         {tarefa.map((task, index) => (
-          <li className='bg-stone-100 flex items-center my-2 rounded-lg pl-10 justify-between ' key={index}>
+          <li className='bg-stone-100 flex items-center my-2 rounded-lg pl-10 justify-between hover:shadow-md' key={index}>
             {task}
             <button className='mx-8 my-5 bg-red-600 p-2  rounded' onClick={() => handleDeleteTask(index)}>Excluir</button>
           </li>

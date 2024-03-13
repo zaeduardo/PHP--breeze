@@ -28,9 +28,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/test', function() { 
-    return  Inertia::render('')
-});
 
 
 Route::get('/dashboard', function () {
