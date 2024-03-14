@@ -5,7 +5,7 @@ import NavLink from '@/Components/NavLink';
 import One from '@/Components/One';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/react';
-import LinkPage from '@/Components/LinkPage';
+
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -28,9 +28,8 @@ export default function Authenticated({ user, header, children }) {
                                              Dashboard
                             </NavLink>
 
-                                <LinkPage href={route('page-one')} active={route().current('page-one')} >
-                                    Page One
-                                </LinkPage>
+                       
+                               
                                               
                             </div>
                         </div>
