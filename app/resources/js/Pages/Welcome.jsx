@@ -1,4 +1,5 @@
 import { Link } from '@inertiajs/react';
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Fragment } from 'react';
 
 export default function Welcome({ auth }) {
@@ -7,7 +8,12 @@ export default function Welcome({ auth }) {
         sm:items-center min-h-screen bg-dots-darker bg-center 
         bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 
         selection:bg-red-500 selection:text-white">
-            
+   
+  
+
+
+
+
             <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
                 {!auth.user ? (
                     <div className="bg-amber-50	">

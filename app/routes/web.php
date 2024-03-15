@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\PageOneController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\HomePage;
 
 /*
 |--------------------------------------------------------------------------

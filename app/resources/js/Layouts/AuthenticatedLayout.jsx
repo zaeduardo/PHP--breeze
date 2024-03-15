@@ -17,20 +17,24 @@ export default function Authenticated({ user, header, children }) {
                     <div className="flex justify-between h-16">
                         <div className="flex">
                             <div className="shrink-0 flex items-center">
-                                <Link href="/">
-                                    <ApplicationLogo className="bg-blue-500 rounded-full h-9 w-auto fill-current text-gray-800" />
-                                </Link>
+                              
+                                    <Link href="/">
+                                        <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Home
+                                        </a>
+                                    </Link>
+                                
                             </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 {/* NavLink é só um  compnente que estiliza um tag Link */}
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
-                                             Dashboard
-                            </NavLink>
+                                    Dashboard
+                                </NavLink>
+                                <NavLink href={route('search.index')} active={route().current('search.*')}>
+                                    Pesquisa
+                                </NavLink>
 
-                       
-                               
-                                              
                             </div>
                         </div>
 
@@ -100,9 +104,13 @@ export default function Authenticated({ user, header, children }) {
                 <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
-                            Dashboard
+                            Atividade
                         </ResponsiveNavLink>
-                
+                        <ResponsiveNavLink href={route('search.index')} active={route().current('search.*')}>
+                            Procurar
+                        </ResponsiveNavLink>
+
+
 
                     </div>
 
@@ -113,9 +121,9 @@ export default function Authenticated({ user, header, children }) {
                         </div>
 
                         <div className="mt-3 space-y-1">
-                            <ResponsiveNavLink href={route('profile.edit')}>Profile</ResponsiveNavLink>
+                            <ResponsiveNavLink href={route('profile.edit')}>Perfil</ResponsiveNavLink>
                             <ResponsiveNavLink method="post" href={route('logout')} as="button">
-                                Log Out
+                                Sair
                             </ResponsiveNavLink>
                         </div>
                     </div>
