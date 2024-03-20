@@ -25,7 +25,7 @@ function TodoList() {
 
   return (
     <div>
-      <h2 className="font-semibold text-xl text-gray-800 leading-tight my-3">Adicionar Atividade</h2>
+      <h2 className="font-semibold text-xl text-gray-800 leading-tight my-3">Adicionar Task</h2>
 
       
      <div className="p-2 mb-10 flex justify-between ">
@@ -34,9 +34,9 @@ function TodoList() {
         value={inputValue}
         className='w-5/6 rounded-lg'
         onChange={handleInputChange}
-        placeholder="Adicionar atividade"
+        placeholder="Adicionar Task"
       />
-      <button className=' p-2 bg-blue-600 rounded' onClick={AddTarefa}> Enviar</button>
+      <button className='text-white p-2 bg-blue-600 rounded' onClick={AddTarefa}> Enviar</button>
       </div>
 
       <ul>
@@ -55,7 +55,7 @@ export default function Dashboard({ auth }) {
   return (
     <AuthenticatedLayout
       user={auth.user}
-      header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Atividade</h2>}
+      header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Task</h2>}
     >
       <Head title="Dashboard" />
 

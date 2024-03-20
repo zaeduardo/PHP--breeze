@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\PageOneController;
 use App\Http\Controllers\SearchController;
-use App\Http\Controllers\HomePage;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/home',[HomeController::class, 'index'])->name('home.index');
+    Route::get('/form', [FormController::class, 'index'])->name('form.index');
     Route::get('/search', [SearchController::class, 'index'])->name('search.index');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

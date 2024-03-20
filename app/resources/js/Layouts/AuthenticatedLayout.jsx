@@ -18,18 +18,19 @@ export default function Authenticated({ user, header, children }) {
                         <div className="flex">
                             <div className="shrink-0 flex items-center">
                               
-                                    <Link href="/">
-                                        <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                            Home
-                                        </a>
+                                    <Link  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="/home">
+                                       Home 
                                     </Link>
                                 
                             </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                {/* NavLink é só um  compnente que estiliza um tag Link */}
+                                {/* Link da navBar  */}
+                                <NavLink href={route('home.index')} active={route().current('home.*')}>
+                                    Home
+                                </NavLink>
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
-                                    Dashboard
+                                    Task
                                 </NavLink>
                                 <NavLink href={route('search.index')} active={route().current('search.*')}>
                                     Pesquisa
@@ -104,10 +105,10 @@ export default function Authenticated({ user, header, children }) {
                 <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
-                            Atividade
+                            Task
                         </ResponsiveNavLink>
                         <ResponsiveNavLink href={route('search.index')} active={route().current('search.*')}>
-                            Procurar
+                            Pesquisar CEP
                         </ResponsiveNavLink>
 
 
