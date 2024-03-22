@@ -110,8 +110,9 @@ export default function Authenticated({ user, header, children }) {
                         <ResponsiveNavLink href={route('search.index')} active={route().current('search.*')}>
                             Pesquisar CEP
                         </ResponsiveNavLink>
-
-
+                        <ResponsiveNavLink href={route('form.index')} active={route().current('form.*')}>
+                            Form
+                        </ResponsiveNavLink>
 
                     </div>
 
