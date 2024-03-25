@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import Map from '@/Components/MapCompnent';
+import Mapakkk from '@/Components/MapCompnent';
 import { Head } from '@inertiajs/react';
 
 function TodoList() {
@@ -73,10 +73,11 @@ function TodoList() {
               <span className='bg-stone-200  h-10 flex justify-start items-center pl-2' >{task.input}</span>
                <span  className='bg-stone-200  h-10 flex justify-start items-center pl-2'>{task.input2}</span>
                 <span  className='bg-stone-200  h-10 flex justify-start items-center pl-2'>{task.input3}</span>
-            </div>
-                <Map>
-                </Map>
-                    <button className='rounded-full mx-8 my-5 bg-red-600 p-2' onClick={() => handleDeleteTask(index)}>x</button>
+            </div>  
+             <Mapakkk>
+              
+             </Mapakkk>
+                    <button className='rounded-full mx-8 my-5 bg-red-600 p-2' onClick={() => handleDeleteTask(index)}>Excluir</button>
 
           </li>
         ))}

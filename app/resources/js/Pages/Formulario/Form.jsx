@@ -1,6 +1,7 @@
 import React from "react"
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout"
 import { Head } from "@inertiajs/react";
+import Mapakkk from "@/Components/MapCompnent";
 export default function Form({auth, form}){ 
     return (
         <AuthenticatedLayout
@@ -13,7 +14,7 @@ export default function Form({auth, form}){
           <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
               <div className="p-6 text-gray-900">
-            
+            <Mapakkk></Mapakkk>
               </div>
             </div> 
           </div>
