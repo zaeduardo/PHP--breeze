@@ -39,7 +39,7 @@ function TodoList() {
       <h2 className="font-semibold text-xl text-gray-800 leading-tight my-3 ">Adicionar Task</h2>
 
       {/* Dentro dessa div adicionar os campos */}
-      <div className=" p-2 mb-10 flex flex-col items-center space-y-2">
+      <div className=" p-2 mb-10 flex flex-col items-center space-y-2 bg-green-100">
         <input
           type="text"
           value={inputValue}
@@ -63,6 +63,11 @@ function TodoList() {
         />
 
         <button className='text-white p-2 bg-blue-600 rounded w-20' onClick={AddTarefa}> Enviar</button>
+        
+         <div className='bg-red-100 w-1/2 rounded-lg'>
+            <Mapakkk></Mapakkk>
+
+        </div>
       </div>
 
       <ul>
