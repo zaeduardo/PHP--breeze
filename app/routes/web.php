@@ -8,6 +8,7 @@ use App\Http\Controllers\PageOneController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\DadoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/', [DadoController::class, 'index']);
+    Route::post('/salvar', [DadoController::class, 'salvar']);
+    
     Route::get('/home',[HomeController::class, 'index'])->name('home.index');
     Route::get('/form', [FormController::class, 'index'])->name('form.index');
     Route::get('/search', [SearchController::class, 'index'])->name('search.index');

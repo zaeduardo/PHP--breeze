@@ -3,6 +3,7 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
+import { ssrImportKey } from 'vite/runtime';
 
 const Mapakkk = () => {
     useEffect(() => {
@@ -13,7 +14,7 @@ const Mapakkk = () => {
             style: 'mapbox://styles/mapbox/streets-v12',
             center: [ -25.5307,  -49.1958],
             minZoom: 2,
-            zoom: 2
+            zoom: 1
         });
 
         map.on('load', () => {
@@ -53,6 +54,17 @@ const Mapakkk = () => {
                 'building'
             );
 
+            // obtem a localiza;ão do usuario pelo BTNzin
+            map.addControl(
+                new mapboxgl.GeolocateControl({
+                    positionOptions:{
+                        enableHighAccuracy:true
+                    },
+                    trackUserLocation:true,
+                    showUserHeading:true
+                })
+            )
+
             map.on('click', (e) => {
                 const bbox = [
                     [e.point.x - 5, e.point.y - 5],
@@ -80,7 +92,7 @@ const Mapakkk = () => {
     }, []);
 
     return (
-        <div id="map" style={{ top: 0, bottom: 0, width: "100%", height: 500, backgroundColor:'blue' }}/>
+        <div id="map" style={{ borderRadius:"10px", top: 0, bottom: 0, width: "100%", height: "100%", backgroundColor:'blue' }}/>
       );
 };
 
