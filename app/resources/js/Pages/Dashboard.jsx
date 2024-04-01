@@ -3,6 +3,7 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import Mapakkk from '@/Components/MapCompnent';
 import { Head } from '@inertiajs/react';
 import Datakkk from '@/Components/Date';
+import DropDowTask from '@/Components/DropDownTask';
 
 function TodoList() {
   const [inputValue, setInputValue] = useState('');
@@ -35,7 +36,11 @@ function TodoList() {
 
   return (
     <div className='h-dvh'>
-      <h2 className="font-semibold text-xl text-gray-800 leading-tight my-3 ">Adicionar Task</h2>
+      <div className='flex  ml-5'>
+
+      <h2 className="font-semibold text-xl text-gray-800 leading-tight my-3 mr-5 ">Adicionar Task</h2>
+      <DropDowTask/>
+      </div>
       <div className='bg-slate-100	flex flex-row space-x-36 rounded-lg p-8 '>
         <div className=" p-2 mb-10 flex flex-col items-center space-y-2 w-2/4  justify-center ">
           <div className='flex space-y-4 flex-col justify-center w-full  space-y-5 items-center'>

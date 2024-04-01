@@ -1,20 +1,12 @@
-import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import 'react-datepicker/dist/react-datepicker.css'
+import React from 'react';
+import InputMask from 'react-input-mask';
 
-export default function Datakkk({ onDateChange }) {
-  const [date, setDate] = useState(new Date());
-
-  const handleDateChange = (selectedDate) => {
-    setDate(selectedDate);
-    if (onDateChange) {
-      onDateChange(selectedDate);
-    }
-  };
-
-  return (
-    <div className="div">
-      <DatePicker selected={date} onChange={handleDateChange} />
-    </div>
-  );
+function Datakkk() {
+    return (
+        <div>
+            <InputMask className='rounded-lg' mask="99/99/9999" placeholder="DD/MM/AAAA" />
+        </div>
+    );
 }
+
+export default Datakkk;
